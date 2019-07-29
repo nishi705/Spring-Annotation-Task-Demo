@@ -1,10 +1,12 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Actor {
     private int age;
     private String name;
     private String gender;
-
+@Autowired
     public Actor(int age, String name, String gender) {
         this.age = age;
         this.name = name;
