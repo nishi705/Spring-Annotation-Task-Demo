@@ -3,11 +3,14 @@ package com.stackroute.domain;
 import java.util.List;
 
 public class Movie {
-    List<Actor> actor;
+    Actor actor;
 
-    public Movie(List<Actor> actor) {
+    public Movie(Actor actor) {
         this.actor = actor;
     }
+//    public Movie(List<Actor> actor) {
+//        this.actor = actor;
+//    }
 
 //    public Actor getActor() {
 //        return actor;

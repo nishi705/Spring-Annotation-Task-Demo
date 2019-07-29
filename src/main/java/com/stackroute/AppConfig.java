@@ -10,28 +10,22 @@ import java.util.List;
 @Configuration
 public class AppConfig
 {
-    @Bean
-    public Actor getActor()
-    {
-        Actor actor=new Actor(22,"nishi","Female");
-        return actor;
 
-    }
-    @Bean
-    public Actor getActor1()
-    {
-        Actor actor=new Actor(22,"priya","Female");
-        return actor;
-
-    }
+@Bean
+public  Actor getActor()
+{
+    Actor actor=new Actor();
+    actor.setAge(22);
+    actor.setName("nishi");
+    actor.setGender("femlae");
+   return  actor;
+}
     @Bean
     public Movie getMovie()
     {
-        List<Actor> list=new ArrayList<>();
-        list.add(getActor());
-        list.add(getActor1());
-        Movie movie=new Movie(list);
-        return movie;
+      Movie movie=new Movie(getActor());
+      return movie;
+
 
     }
 }
